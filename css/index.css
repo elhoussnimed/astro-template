@@ -333,23 +333,16 @@ header .clouds-and-servers .server-img-3 {
     position: relative;
     padding: 5px 0;
   }
-  header .navbar .container .bars-nav {
-    display: block;
-    position: absolute;
-    right: 0px;
-    font-size: 26px;
-  }
-  header .navbar .container .bars-nav:hover + nav {
-    display: block;
-  }
   header .navbar .container nav ul {
     flex-direction: column;
     margin-left: 0px;
     text-align: center;
   }
+  header .navbar .container nav ul li::after {
+    display: none;
+  }
   header .navbar .container .search-input {
-    width: 40%;
-    margin-inline: auto;
+    width: 50%;
   }
   header .navbar .container .search-input input {
     width: 100%;
@@ -372,14 +365,34 @@ header .clouds-and-servers .server-img-3 {
     text-align: center;
   }
   header .navbar .container nav {
-    display: none;
+    display: block;
     order: 3;
-    background-color: var(--hover-color);
     position: absolute;
-    left: -33px;
-    width: 115%;
+    width: 100%;
     top: 50px;
     z-index: 50;
+  }
+  header .navbar .container nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 5px;
+    gap: 5px;
+  }
+  header .navbar .container nav ul li {
+    padding: 15px 0;
+    background-color: var(--hover-color);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+  header .navbar .container nav ul li a {
+    padding: 25px 10px;
+    font-size: 12px;
+  }
+  header .landing {
+    margin-top: 110px;
   }
   header .landing .container h1 {
     font-size: 2rem;
@@ -395,14 +408,34 @@ header .clouds-and-servers .server-img-3 {
 }
 @media (min-width: 768px) and (max-width: 991px) {
   header .navbar .container nav {
-    display: none;
+    display: block;
     order: 3;
-    background-color: var(--hover-color);
     position: absolute;
-    left: -55px;
-    width: 115%;
+    width: 100%;
     top: 50px;
     z-index: 50;
+  }
+  header .navbar .container nav ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding-top: 10px;
+    gap: 10px;
+  }
+  header .navbar .container nav ul li {
+    padding: 15px 0;
+    background-color: var(--hover-color);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+  }
+  header .navbar .container nav ul li a {
+    padding: 25px 10px;
+    font-size: 12px;
+  }
+  header .landing {
+    margin-top: 120px;
   }
 }
 @media (min-width: 992px) {
