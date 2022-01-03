@@ -1,0 +1,655 @@
+/* start general rules  */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+:root {
+  --primary-color: #31a7de;
+  --secondary-color: #3a5360;
+  --third-color: #637988;
+  --bg-1st-color: #c4a2e2;
+  --bg-2nd-color: #f9fafc;
+  --hover-color: #f0f4f7;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* component ---------------------------------------------------------------- */
+.horizontal-line {
+  width: 60%;
+  height: 2px;
+  margin: 50px auto;
+  background: linear-gradient(
+    45deg,
+    rgba(241, 241, 241, 0) 0%,
+    rgba(241, 241, 241, 0.5049370089832808) 10%,
+    rgba(194, 194, 194, 0.49653364763874297) 30%,
+    rgba(194, 194, 194, 0.7486344879748774) 50%,
+    rgba(194, 194, 194, 0.5) 70%,
+    rgba(233, 233, 233, 0.5021358885351015) 90%,
+    rgba(233, 233, 233, 0) 100%
+  );
+  border-radius: 8px;
+  position: relative;
+}
+.sec-infos {
+  padding: 25px 0;
+  text-align: center;
+}
+.h2 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+.pa {
+  font-size: 15px;
+  color: var(--third-color);
+  line-height: 1.5;
+}
+.btn {
+  height: 35px;
+  padding: 10px 25px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.title {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--third-color);
+  margin-bottom: 10px;
+}
+.title span {
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--secondary-color);
+}
+/* component ---------------------------------------------------------------- */
+/* start media query ------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .h2 {
+    font-size: 1.2rem;
+  }
+  .pa {
+    font-size: 10px;
+    width: 100%;
+  }
+  .horizontal-line {
+    margin: 10px auto;
+  }
+  .btn {
+    padding: 10px;
+    font-size: 12px;
+  }
+  .title,
+  .title span {
+    font-size: 25px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title-service,
+  .title-service span {
+    font-size: 30px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .title-service,
+  .title-service span {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1199px) {
+  .container {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* end media query -------------------------------------------------------------------- */
+/* ------------------------------------------end general rules------------------------------------------  */
+/* start header -------------------------------------------------------------------------- */
+header {
+  background-color: var(--bg-1st-color);
+  height: auto;
+  position: relative;
+}
+header .top .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: white;
+}
+header .top .container .right {
+  display: flex;
+}
+header .top .container .right div {
+  margin-right: 20px;
+}
+header .top .container .right div i {
+  margin-right: 5px;
+  font-size: 15px;
+}
+header .top .container .right div a {
+  font-size: 13px;
+  color: white;
+}
+header .top .container .left {
+  display: flex;
+  align-items: flex-end;
+}
+header .top .container .left img {
+  width: 25px;
+  margin-right: 10px;
+}
+header .top .container .left p {
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+}
+header .top .container .left p::after {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f0dd";
+  position: absolute;
+  top: -30%;
+  left: 120%;
+  font-size: 14px;
+  cursor: pointer;
+}
+header .navbar {
+  background-color: var(--bg-2nd-color);
+  box-shadow: 0px 2px 1px #00000041;
+}
+header .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar .container a img {
+  width: 120px;
+  object-fit: contain;
+}
+header .navbar .container nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 140px;
+}
+header .navbar .container nav ul li {
+  padding: 25px 0px;
+  position: relative;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+}
+header .navbar .container nav ul li:hover {
+  background-color: var(--hover-color);
+}
+header .navbar .container nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+}
+header .navbar .container nav ul li:hover::after {
+  background-color: var(--primary-color);
+}
+header .navbar .container nav ul li a {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 25px 20px;
+}
+header .navbar .container .bars-nav {
+  display: none;
+}
+header .navbar .container .search-input {
+  position: relative;
+}
+header .navbar .container .search-input::after {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+header .navbar .container .search-input input {
+  height: 40px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid black;
+  outline: none;
+  cursor: text;
+  position: relative;
+}
+header .navbar .container .search-input input:focus {
+  border: 1px solid black;
+  outline: none;
+}
+header .navbar .container .search-input input::placeholder {
+  font-weight: 500;
+}
+header .landing {
+  padding: 35px 0;
+}
+header .landing .container {
+  text-align: center;
+}
+header .landing .container h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+header .landing .container > p {
+  margin-bottom: 25px;
+  font-size: 15px;
+  color: var(--third-color);
+  line-height: 1.5;
+  font-weight: 500;
+}
+header .clouds-and-servers {
+  position: relative;
+  bottom: -2px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+header .clouds-and-servers .big-cloud {
+  width: 70%;
+  position: relative;
+  left: -70%;
+  z-index: 5;
+}
+header .clouds-and-servers .right-cloud {
+  position: relative;
+  right: 0px;
+  width: 45%;
+}
+header .clouds-and-servers .left-cloud {
+  position: relative;
+  right: -10%;
+  width: 45%;
+}
+/* start  navbar responsive  */
+@media (max-width: 991px) {
+  header .navbar .container {
+    position: relative;
+    padding: 5px 0;
+  }
+  header .navbar .container .bars-nav {
+    display: block;
+    position: absolute;
+    right: 0px;
+    font-size: 26px;
+  }
+  header .navbar .container .bars-nav:hover + nav {
+    display: block;
+  }
+  header .navbar .container nav ul {
+    flex-direction: column;
+    margin-left: 0px;
+    text-align: center;
+  }
+  header .navbar .container .search-input {
+    width: 40%;
+    margin-inline: auto;
+  }
+  header .navbar .container .search-input input {
+    width: 100%;
+  }
+  header .clouds-and-servers .server {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header .top .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .top .container .right {
+    flex-direction: column;
+  }
+  header .top .container .right div {
+    width: 100%;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+  header .navbar .container nav {
+    display: none;
+    order: 3;
+    background-color: var(--hover-color);
+    position: absolute;
+    left: -33px;
+    width: 116%;
+    top: 50px;
+    z-index: 50;
+  }
+  header .landing .container h1 {
+    font-size: 2rem;
+  }
+  header .landing .container h2 {
+    font-size: 1rem;
+  }
+  header .landing .container > p {
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 13px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navbar .container nav {
+    display: none;
+    order: 3;
+    background-color: var(--hover-color);
+    position: absolute;
+    left: -55px;
+    width: 115%;
+    top: 50px;
+    z-index: 50;
+  }
+}
+@media (min-width: 992px) {
+  header .navbar .container nav ul {
+    margin-left: 0px;
+  }
+}
+/* end header -------------------------------------------------------------------------- */
+/* start office section ------------------------------------------------------- */
+section.office .container p {
+  width: 80%;
+  margin-inline: auto;
+}
+section.office .container .horizontal-line {
+  margin-bottom: 20px;
+}
+/* end office section ------------------------------------------------------- */
+/* start section infos ---------------------------------------------------------- */
+section.infos .container > div {
+  display: flex;
+  justify-content: space-evenly;
+}
+section.infos .container div div i {
+  background-color: #40d5fd;
+  padding: 15px;
+  border-radius: 50%;
+  color: white;
+  margin-bottom: 20px;
+}
+section.infos .container div div h5 {
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+section.infos .container div div address {
+  font-size: 14px;
+  word-spacing: 3px;
+  color: var(--third-color);
+  margin-bottom: 5px;
+}
+section.infos .container div div a {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--third-color);
+  font-size: 15px;
+}
+@media (max-width: 767px) {
+  section.infos .container > div {
+    flex-direction: column;
+  }
+  section.infos .container > div div {
+    margin-bottom: 20px;
+  }
+}
+/* end section infos ---------------------------------------------------------- */
+/* start section find-us ---------------------------------------------------------- */
+section.find-us .container {
+  margin-bottom: 30px;
+}
+section.find-us .container p {
+  width: 80%;
+  margin-inline: auto;
+}
+section.find-us .img {
+  height: 250px;
+}
+section.find-us .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: grayscale(0.6);
+}
+/* end section find-us ---------------------------------------------------------- */
+/* start section mail-us ---------------------------------------------------------- */
+section.mail-us .container form {
+  width: 70%;
+  margin-inline: auto;
+  text-align: left;
+  margin-bottom: 50px;
+}
+section.mail-us .container form .parent {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+section.mail-us .container form .parent div {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+section.mail-us .container form .parent div input,
+section.mail-us .container form textarea {
+  border: none;
+  padding: 10px;
+  background-color: #edf2f6;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+section.mail-us .container form .parent div input,
+section.mail-us .container form textarea::placeholder {
+  font-size: 12px;
+  color: var(--third-color);
+  font-weight: 300;
+}
+section.mail-us .container form .parent div input,
+section.mail-us .container form textarea:focus {
+  border: none;
+  outline: none;
+}
+section.mail-us .container form label {
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--third-color);
+  margin-bottom: 10px;
+  width: fit-content;
+}
+section.mail-us .container form label::after {
+  content: "*";
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  font-size: 15px;
+  color: #40d5fd;
+}
+section.mail-us .container form textarea {
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+section.mail-us .container form a {
+  width: fit-content;
+  margin-inline: auto;
+  display: block;
+}
+@media (max-width: 767px) {
+  section.mail-us .container form {
+    width: 100%;
+  }
+  section.mail-us .container form .parent {
+    flex-direction: column;
+  }
+  section.mail-us .container form .parent div {
+    width: 100%;
+  }
+}
+/* end section mail-us ---------------------------------------------------------- */
+/* start footer---------------------------------------------------------------------------  */
+footer.sec-infos {
+  background-color: var(--bg-1st-color);
+  color: white;
+  position: relative;
+  height: auto;
+  padding-bottom: 0px;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .container > div {
+  width: 23%;
+  text-align: left;
+}
+footer .container div h5 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+footer .container div ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+footer .container div ul li {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+footer .container div a {
+  color: white;
+}
+footer .container div:nth-child(3) h6 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+footer .container div:nth-child(3) p {
+  font-size: 12px;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+footer .container div:nth-child(3) a {
+  margin-left: 70%;
+  font-size: 13px;
+  font-weight: 600;
+}
+footer .container div:last-child div a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+footer .container div:last-child .coder {
+  margin-top: 20px;
+}
+footer .container div:last-child .coder p span {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+footer .clouds-and-servers {
+  position: relative;
+  bottom: -2px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+footer .clouds-and-servers .big-cloud {
+  width: 70%;
+  position: relative;
+  left: -70%;
+  z-index: 5;
+}
+footer .clouds-and-servers .right-cloud {
+  position: relative;
+  right: 0px;
+  width: 45%;
+}
+footer .clouds-and-servers .left-cloud {
+  position: relative;
+  right: -10%;
+  width: 45%;
+}
+@media (max-width: 991px) {
+  footer .container {
+    flex-direction: column;
+  }
+  footer .container > div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  footer .container > div:nth-child(2) div {
+    margin-bottom: 10px;
+  }
+  footer .container div ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  footer .container div ul li {
+    margin: 0 15px 0 0;
+  }
+  footer .container div:last-child div a i {
+    margin-right: 15px;
+  }
+}
+/* end footer -------------------------------------------------------------------------- */

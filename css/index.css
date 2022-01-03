@@ -1,0 +1,772 @@
+/* start general rules  */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+}
+:root {
+  --primary-color: #31a7de;
+  --secondary-color: #3a5360;
+  --third-color: #637988;
+  --bg-1st-color: #c4a2e2;
+  --bg-2nd-color: #f9fafc;
+  --hover-color: #f0f4f7;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* component ---------------------------------------------------------------- */
+.horizontal-line {
+  width: 60%;
+  height: 2px;
+  margin: 50px auto;
+  background: linear-gradient(
+    45deg,
+    rgba(241, 241, 241, 0) 0%,
+    rgba(241, 241, 241, 0.5049370089832808) 10%,
+    rgba(194, 194, 194, 0.49653364763874297) 30%,
+    rgba(194, 194, 194, 0.7486344879748774) 50%,
+    rgba(194, 194, 194, 0.5) 70%,
+    rgba(233, 233, 233, 0.5021358885351015) 90%,
+    rgba(233, 233, 233, 0) 100%
+  );
+  border-radius: 8px;
+  position: relative;
+}
+.sec-infos {
+  padding: 25px 0;
+  text-align: center;
+}
+.h2 {
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+}
+.pa {
+  font-size: 15px;
+  color: var(--third-color);
+  line-height: 1.5;
+}
+.btn {
+  height: 35px;
+  padding: 8px 25px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid gray;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+/* component ---------------------------------------------------------------- */
+/* start media query ------------------------------------------------------------- */
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .h2 {
+    font-size: 1.2rem;
+  }
+  .pa {
+    font-size: 10px;
+    width: 100%;
+  }
+  .horizontal-line {
+    margin: 10px auto;
+  }
+  .btn {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (min-width: 1199px) {
+  .container {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* end media query -------------------------------------------------------------------- */
+/* ------------------------------------------end general rules------------------------------------------  */
+/* -------------------------------------------start header-------------------------------------  */
+header {
+  background-color: var(--bg-1st-color);
+  height: auto;
+  position: relative;
+}
+header .top .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  color: white;
+}
+header .top .container .right {
+  display: flex;
+}
+header .top .container .right div {
+  margin-right: 20px;
+}
+header .top .container .right div i {
+  margin-right: 5px;
+  font-size: 15px;
+}
+header .top .container .right div a {
+  font-size: 13px;
+  color: white;
+}
+header .top .container .left {
+  display: flex;
+  align-items: flex-end;
+}
+header .top .container .left img {
+  width: 25px;
+  margin-right: 10px;
+}
+header .top .container .left p {
+  text-transform: uppercase;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+}
+header .top .container .left p::after {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f0dd";
+  position: absolute;
+  top: -30%;
+  left: 120%;
+  font-size: 14px;
+  cursor: pointer;
+}
+header .navbar {
+  background-color: var(--bg-2nd-color);
+  box-shadow: 0px 2px 1px #00000041;
+}
+header .navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .navbar .container a img {
+  width: 120px;
+  object-fit: contain;
+}
+header .navbar .container nav ul {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 140px;
+}
+header .navbar .container nav ul li {
+  padding: 25px 0px;
+  position: relative;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+}
+header .navbar .container nav ul li:hover {
+  background-color: var(--hover-color);
+}
+header .navbar .container nav ul li::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+  transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+}
+header .navbar .container nav ul li:hover::after {
+  background-color: var(--primary-color);
+}
+header .navbar .container nav ul li a {
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 25px 20px;
+}
+header .navbar .container .bars-nav {
+  display: none;
+}
+header .navbar .container .search-input {
+  position: relative;
+}
+header .navbar .container .search-input::after {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f002";
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+header .navbar .container .search-input input {
+  height: 40px;
+  width: 150px;
+  padding: 5px;
+  border-radius: 8px;
+  border: 1px solid black;
+  outline: none;
+  cursor: text;
+  position: relative;
+}
+header .navbar .container .search-input input:focus {
+  border: 1px solid black;
+  outline: none;
+}
+header .navbar .container .search-input input::placeholder {
+  font-weight: 500;
+}
+header .landing .container h1 {
+  margin: 20px 0 5px;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+header .landing .container h2 {
+  font-weight: 400;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+header .landing .container > p {
+  width: 40%;
+  color: white;
+  margin-bottom: 25px;
+}
+header .landing .container ul {
+  padding-left: 40px;
+}
+header .landing .container ul li {
+  margin-bottom: 5px;
+  color: white;
+  font-size: 15px;
+  position: relative;
+}
+header .landing .container ul li::before {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f00c";
+  position: absolute;
+  top: -2px;
+  left: -30px;
+  color: rgb(2, 170, 2);
+  font-size: 20px;
+}
+header .clouds-and-servers {
+  position: relative;
+  bottom: -2px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+header .clouds-and-servers .big-cloud {
+  width: 70%;
+  position: relative;
+  left: -70%;
+  z-index: 5;
+}
+header .clouds-and-servers .right-cloud {
+  position: relative;
+  right: 0px;
+  width: 45%;
+}
+header .clouds-and-servers .left-cloud {
+  position: relative;
+  right: -10%;
+  width: 45%;
+}
+header .clouds-and-servers .server-img-1 {
+  width: 15%;
+  position: relative;
+  right: 96%;
+  z-index: 6;
+}
+header .clouds-and-servers .server-img-2 {
+  width: 13%;
+  position: relative;
+  right: 118%;
+  z-index: 1;
+}
+header .clouds-and-servers .server-img-3 {
+  width: 13%;
+  position: relative;
+  right: 116%;
+  z-index: 4;
+}
+/* start media query ---------------------------------------------------------------------------------- */
+/* start  navbar responsive  */
+@media (max-width: 991px) {
+  header .navbar .container {
+    position: relative;
+    padding: 5px 0;
+  }
+  header .navbar .container .bars-nav {
+    display: block;
+    position: absolute;
+    right: 0px;
+    font-size: 26px;
+  }
+  header .navbar .container .bars-nav:hover + nav {
+    display: block;
+  }
+  header .navbar .container nav ul {
+    flex-direction: column;
+    margin-left: 0px;
+    text-align: center;
+  }
+  header .navbar .container .search-input {
+    width: 40%;
+    margin-inline: auto;
+  }
+  header .navbar .container .search-input input {
+    width: 100%;
+  }
+  header .clouds-and-servers .server {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header .top .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  header .top .container .right {
+    flex-direction: column;
+  }
+  header .top .container .right div {
+    width: 100%;
+    margin: 0 auto 10px;
+    text-align: center;
+  }
+  header .navbar .container nav {
+    display: none;
+    order: 3;
+    background-color: var(--hover-color);
+    position: absolute;
+    left: -33px;
+    width: 115%;
+    top: 50px;
+    z-index: 50;
+  }
+  header .landing .container h1 {
+    font-size: 2rem;
+  }
+  header .landing .container h2 {
+    font-size: 1rem;
+  }
+  header .landing .container > p {
+    margin-bottom: 15px;
+    width: 100%;
+    font-size: 13px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  header .navbar .container nav {
+    display: none;
+    order: 3;
+    background-color: var(--hover-color);
+    position: absolute;
+    left: -55px;
+    width: 115%;
+    top: 50px;
+    z-index: 50;
+  }
+}
+@media (min-width: 992px) {
+  header .navbar .container nav ul {
+    margin-left: 0px;
+  }
+}
+/* -------------------------------------------end header-------------------------------------  */
+/* ------------------------------start feature section------------------------------  */
+section.feature {
+  margin-top: 30px;
+}
+section.feature .container .top {
+  width: 60%;
+  margin-inline: auto;
+  margin-bottom: 50px;
+}
+section.feature .container .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+section.feature .container .bottom div i {
+  font-size: 5rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+section.feature .container .bottom div h4 {
+  color: var(--secondary-color);
+  text-transform: uppercase;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+section.feature .container .bottom div p {
+  width: 80%;
+  margin-inline: auto;
+}
+@media (max-width: 767px) {
+  section.feature {
+    margin-top: 0px;
+  }
+  section.feature .container .top {
+    width: 100%;
+  }
+  section.feature .container .bottom {
+    flex-direction: column;
+  }
+  section.feature .container .bottom div {
+    margin-bottom: 20px;
+  }
+}
+/* ------------------------------end feature section------------------------------  */
+/* ------------------------------start domaine section------------------------------  */
+section.domaine {
+  margin-bottom: 50px;
+}
+section.domaine .container .top {
+  width: 60%;
+  margin-inline: auto;
+  margin-bottom: 30px;
+}
+section.domaine .container .bottom {
+  border: 1px solid grey;
+  width: 50%;
+  margin-inline: auto;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}
+section.domaine .container .bottom .input {
+  width: 60%;
+  position: relative;
+}
+section.domaine .container .bottom .input::before {
+  content: ".com";
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+}
+section.domaine .container .bottom .input::after {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f0dd";
+  position: absolute;
+  top: 50%;
+  right: 4px;
+  transform: translateY(-65%);
+  cursor: pointer;
+}
+section.domaine .container .bottom .input input {
+  background-color: var(--bg-2nd-color);
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px 0;
+  height: 35px;
+}
+section.domaine .container .bottom .input input:focus {
+  border: 1px solid gray;
+  outline: none;
+}
+section.domaine .container .bottom a {
+  width: 35%;
+  display: inline-block;
+}
+@media (max-width: 767px) {
+  section.domaine .container .top,
+  section.domaine .container .bottom {
+    width: 100%;
+  }
+  section.domaine .container .bottom a {
+    padding: 10px 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section.domaine .container .bottom {
+    width: 80%;
+  }
+}
+/* ------------------------------end domaine section------------------------------  */
+/* -------------------------------start section price-------------------------------  */
+section.pricing .container {
+  display: flex;
+  justify-content: space-between;
+}
+section.pricing .container .card {
+  width: 23%;
+  box-shadow: 0px 0px 3px -1px black;
+  border-radius: 15px;
+  position: relative;
+}
+section.pricing .container .card .top {
+  width: 100%;
+  height: 150px;
+  background-color: var(--primary-color);
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+section.pricing .container .card .top img:first-of-type {
+  width: 30%;
+  position: absolute;
+  bottom: 0px;
+  left: 100px;
+  z-index: 0;
+}
+section.pricing .container .card .top img:last-of-type {
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+section.pricing .container .card .bottom {
+  width: 100%;
+  padding: 20px 0;
+}
+section.pricing .container .card .bottom ul {
+  text-align: left;
+  padding-left: 80px;
+  margin-bottom: 10px;
+}
+section.pricing .container .card .bottom ul li {
+  color: var(--third-color);
+  font-size: 15px;
+  margin-bottom: 10px;
+  position: relative;
+}
+section.pricing .container .card .bottom ul li::after {
+  font-family: "font awesome 5 free";
+  font-weight: 900;
+  content: "\f00c";
+  position: absolute;
+  top: -2px;
+  left: -30px;
+  color: rgb(2, 170, 2);
+  font-size: 20px;
+}
+section.pricing .container .card .bottom ul li span {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+section.pricing .container .card .bottom a {
+  display: inline-block;
+}
+section.pricing .container .card .ultra {
+  background-color: var(--primary-color);
+  color: white;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 10px solid white;
+  border-radius: 50%;
+  position: absolute;
+  top: -14%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+section.pricing .container .card .ultra p:first-child {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+section.pricing .container .card .ultra p:nth-child(2) {
+  font-size: 15px;
+}
+section.pricing .container .card .ultra p:last-child {
+  font-size: 14px;
+  text-transform: lowercase;
+}
+@media (max-width: 767px) {
+  section.pricing .container {
+    flex-direction: column;
+  }
+  section.pricing .container .card {
+    width: 80%;
+    margin: 0 auto 60px;
+  }
+  section.pricing .container .card .top img:first-of-type {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  section.pricing .container {
+    flex-wrap: wrap;
+  }
+  section.pricing .container .card {
+    width: 45%;
+    margin-bottom: 60px;
+  }
+}
+/* -------------------------------end section price-------------------------------  */
+/* ----------------------------start section contact----------------------------  */
+section.contact {
+  box-shadow: 0px 2px 3px -1px black;
+}
+section.contact p {
+  margin-bottom: 40px;
+}
+section.contact a {
+  display: inline-block;
+}
+/* ----------------------------end section contact----------------------------  */
+/* ---------------------------------start footer---------------------------------  */
+footer {
+  background-color: var(--bg-1st-color);
+  color: white;
+  position: relative;
+  height: auto;
+  padding-bottom: 0px !important;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .container > div {
+  width: 23%;
+  text-align: left;
+}
+footer .container div h5 {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+footer .container div ul {
+  padding-left: 20px;
+  list-style: disc;
+}
+footer .container div ul li {
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+footer .container div a {
+  color: white;
+}
+footer .container div:nth-child(3) h6 {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 7px;
+}
+footer .container div:nth-child(3) p {
+  font-size: 12px;
+  line-height: 1.3;
+  margin-bottom: 5px;
+}
+footer .container div:nth-child(3) a {
+  margin-left: 70%;
+  font-size: 13px;
+  font-weight: 600;
+}
+footer .container div:last-child div a i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+footer .container div:last-child .coder {
+  margin-top: 20px;
+}
+footer .container div:last-child .coder p span {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+footer .clouds-and-servers {
+  position: relative;
+  bottom: -2px;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+}
+footer .clouds-and-servers .big-cloud {
+  width: 70%;
+  position: relative;
+  left: -70%;
+  z-index: 5;
+}
+footer .clouds-and-servers .right-cloud {
+  position: relative;
+  right: 0px;
+  width: 45%;
+}
+footer .clouds-and-servers .left-cloud {
+  position: relative;
+  right: -10%;
+  width: 45%;
+}
+/* start media query ---------------------------------------------------------------------------------- */
+/* start responsive footer  */
+@media (max-width: 991px) {
+  footer .container {
+    flex-direction: column;
+  }
+  footer .container > div {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  footer .container > div:nth-child(2) div {
+    margin-bottom: 10px;
+  }
+  footer .container div ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  footer .container div ul li {
+    margin: 0 15px 0 0;
+  }
+  footer .container div:last-child div a i {
+    margin-right: 15px;
+  }
+}
+/* ---------------------------------end footer  ---------------------------------*/
