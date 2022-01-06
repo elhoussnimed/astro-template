@@ -331,6 +331,9 @@ header .clouds-and-servers .left-cloud {
   header .navbar .container nav ul li::after {
     display: none;
   }
+  header .navbar .container nav ul li a {
+    padding: 0px;
+  }
   header .navbar .container .search-input {
     width: 50%;
   }
@@ -378,7 +381,7 @@ header .clouds-and-servers .left-cloud {
     -o-border-radius: 25px;
   }
   header .navbar .container nav ul li a {
-    padding: 25px 10px;
+    /* padding: 0px; */
     font-size: 12px;
   }
   header .landing {
@@ -421,7 +424,7 @@ header .clouds-and-servers .left-cloud {
     -o-border-radius: 25px;
   }
   header .navbar .container nav ul li a {
-    padding: 25px 10px;
+    /* padding: 25px 10px; */
     font-size: 12px;
   }
   header .landing {
@@ -431,6 +434,9 @@ header .clouds-and-servers .left-cloud {
 @media (min-width: 992px) {
   header .navbar .container nav ul {
     margin-left: 0px;
+  }
+  header .navbar .container nav ul li a {
+    padding: 25px 10px;
   }
 }
 
